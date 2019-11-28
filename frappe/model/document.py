@@ -1256,9 +1256,13 @@ def execute_action(doctype, name, action, **kwargs):
 		frappe.db.rollback()
 
 		# add a comment (?)
-		if frappe.local.error_log or frappe.flags.error_message:
+		if frappe.local.message_log or frappe.local.error_log or frappe.flags.error_message:
 			msg = ''
+			if frappe.local.message_log:
+				msg += json.loads(frappe.local.message_log[-1]).get('message')
 			if frappe.local.error_log:
+				if msg:
+					msg += '<br>'
 				msg += '<br>'.join([json.loads(log).get('message') for log in frappe.local.error_log])
 			if frappe.flags.error_message:
 				if msg:
