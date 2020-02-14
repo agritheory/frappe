@@ -189,3 +189,6 @@ typings/
 # cypress
 cypress/screenshots
 cypress/videos
+
+#yarn
+yarn.lock/
