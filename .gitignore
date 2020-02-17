@@ -191,4 +191,4 @@ cypress/screenshots
 cypress/videos
 
 #yarn
-yarn.lock/
+yarn.lock
