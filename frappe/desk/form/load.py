@@ -276,4 +276,5 @@ def get_document_email(doctype, name):
 	return "{0}+{1}+{2}@{3}".format(email[0], quote(doctype), quote(name), email[1])
 
 def get_automatic_email_link():
-	return frappe.db.get_value("Email Account", {"enable_incoming": 1, "enable_automatic_linking": 1}, "email_id")
+	account = frappe.db.get_value("Email Account", {"enable_incoming": 1, "enable_automatic_linking": 1}, "email_id")
+	return None if not account else account
