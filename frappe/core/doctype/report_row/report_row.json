@@ -1,0 +1,66 @@
+{
+ "creation": "2020-02-18 15:04:46.569732",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "row_label",
+  "column_break_4",
+  "account",
+  "subtotal",
+  "section_break_5",
+  "formula"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fetch_from": "account.account_name",
+   "fieldname": "row_label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Row Label"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 3,
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account",
+   "options": "Account"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "subtotal",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Subtotal/Calculation"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 3,
+   "fieldname": "formula",
+   "fieldtype": "Code",
+   "in_list_view": 1,
+   "label": "Formula"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-02-19 18:10:38.286745",
+ "modified_by": "Administrator",
+ "module": "Core",
+ "name": "Report Row",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

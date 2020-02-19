@@ -23,7 +23,9 @@
   "report_script",
   "json",
   "permission_rules",
-  "roles"
+  "roles",
+  "account_config_section_break",
+  "report_rows"
  ],
  "fields": [
   {
@@ -117,8 +119,10 @@
    "read_only": 1
   },
   {
+   "collapsible": 1,
    "fieldname": "permission_rules",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Roles"
   },
   {
    "depends_on": "eval:doc.is_standard == 'Yes'",
@@ -147,10 +151,22 @@
    "fieldname": "report_script",
    "fieldtype": "Code",
    "label": "Script"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "account_config_section_break",
+   "fieldtype": "Section Break",
+   "label": "Rows"
+  },
+  {
+   "fieldname": "report_rows",
+   "fieldtype": "Table",
+   "label": "Report Rows",
+   "options": "Report Row"
   }
  ],
  "idx": 1,
- "modified": "2019-10-09 15:43:08.577610",
+ "modified": "2020-02-19 17:54:03.760685",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "Report",
